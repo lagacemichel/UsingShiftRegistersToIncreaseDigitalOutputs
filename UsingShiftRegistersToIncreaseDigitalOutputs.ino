@@ -51,7 +51,7 @@ void setup() {
 
 void loop() {
   outputValueToLeds();
-  rotateValueLeft();
+  shiftValueLeft();
   delay(WAIT_TIME);
 }
 
@@ -70,7 +70,7 @@ void moveIntegerIntoOutputByteArray(int integer)
   }
 }
 
-void rotateValueLeft()
+void shiftValueLeft()
 {
   displayValue = displayValue << 1;
   if (displayValue > LARGEST_VALUE)
